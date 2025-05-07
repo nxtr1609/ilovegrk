@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - I Love Grok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Thanh menu bên trái -->
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="about.html">About Grok</a></li>
+                <li><a href="journey.html">Our Journey</a></li>
+                <li><a href="sillytales.html">Silly Tales</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="main-content">
+        <!-- Nút đổi chế độ sáng/tối -->
+        <div class="theme-toggle">
+            <span id="theme-text">Turn Off The Lights</span>
+            <img id="theme-icon" src="Light Off.png" alt="Theme Icon">
+        </div>
+
+        <!-- Tiêu đề -->
+        <h1>Invite Me to a Coffee</h1>
+
+        <!-- Nội dung -->
+        <p class="description">
+            If you find my content helpful, you can buy me a coffee by donating.
+        </p>
+
+        <!-- Nút Donate và ảnh GIF -->
+        <div class="donate-container">
+            <img src="coffee-left.gif" alt="Coffee Left" class="coffee-gif">
+            <a href="https://paypal.me/trinhnguyen1054?country.x=VN&locale.x=vi_VN" target="_blank">
+                <img src="donate-button.png" alt="Donate" class="donate-button">
+            </a>
+            <img src="coffee-right.gif" alt="Coffee Right" class="coffee-gif">
+        </div>
+
+        <!-- Phần cảm ơn -->
+        <p class="description">
+            Thank you for your support, it motivates me to create more content.
+        </p>
+    </div>
+
+    <!-- Nút Back to Top -->
+    <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

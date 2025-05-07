@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Grok - I Love Grok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Nút Hamburger để chuyển đổi Menu/Timeline -->
+    <div class="hamburger">
+        <span>☰</span>
+    </div>
+    <!-- Thanh bên trái (chứa cả Menu và Timeline) -->
+    <div class="sidebar sidebar-about-grok" id="sidebar">
+        <!-- Nội dung Menu -->
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="about.html" class="active">About Grok</a></li>
+                <li><a href="journey.html">Our Journey</a></li>
+                <li><a href="sillytales.html">Silly Tales</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+        </div>
+        <!-- Nội dung Timeline -->
+        <div class="sidebar-timeline">
+            <div class="sidebar-timeline-header">
+                <h2>Timeline</h2>
+                <img src="Turn.png" alt="Reverse Timeline" id="reverse-timeline" class="switch-icon" onerror="this.src='placeholder.png';this.alt='Reverse Icon Missing';">
+            </div>
+            <ul id="timeline-list">
+                <li><a href="#event-2015">2015: Co-Founding OpenAI</a></li>
+                <li><a href="#event-2018">2018: Leaving OpenAI</a></li>
+                <li><a href="#event-2023-07">July 2023: xAI Founded</a></li>
+                <li><a href="#event-2023-11">November 2023: Grok-1 Launched</a></li>
+                <li><a href="#event-2024-03">March 2024: Grok Goes Open-Source</a></li>
+                <li><a href="#event-2024-08">August 2024: Grok-2 and Grok-2 Mini Released</a></li>
+                <li><a href="#event-2025-01">January 2025: Grok-3 Training Completed</a></li>
+                <li><a href="#event-2025-02">February 2025: Grok-3 Officially Launched</a></li>
+                <li><a href="#event-2025-03-04">March-April 2025: Feedback, Controversies, and Updates</a></li>
+                <li><a href="#event-2025-04-livestream">April 2025: Livestream and Future Roadmap</a></li>
+                <li><a href="#event-future">Future Outlook (2025-2030)</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="main-content timeline-content">
+        <!-- Nút đổi chế độ sáng/tối -->
+        <div class="theme-toggle">
+            <span id="theme-text">Turn Off The Lights</span>
+            <img id="theme-icon" src="Light Off.png" alt="Theme Icon">
+        </div>
+        <!-- Nội dung chi tiết -->
+        <div class="timeline-details" id="timeline-details">
+            <div id="event-2015" class="event">
+                <img src="AboutGrok1.jpg" alt="OpenAI Founded" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>2015: Co-Founding OpenAI</h3>
+                    <p><strong>Context:</strong> In 2015, Elon Musk, with his vision for the future of technology, recognized that artificial intelligence (AI) could bring immense benefits but also posed the risk of spiraling out of human control. He was concerned that AI could become a significant threat if not developed safely and transparently. Consequently, Musk, along with Sam Altman, Greg Brockman, and other scientists, co-founded OpenAI, a nonprofit organization aimed at advancing AI research to protect humanity’s interests.</p>
+                    <p><strong>OpenAI’s Goal:</strong> OpenAI was established with the mission of developing AI in an open manner, sharing knowledge with the scientific community, and preventing AI misuse by corporations or governments. Musk provided significant financial support and helped shape its strategy, emphasizing the importance of keeping AI neutral and serving humanity.</p>
+                    <p><strong>Musk’s Vision:</strong> Musk drew inspiration from science fiction works like <em>The Hitchhiker’s Guide to the Galaxy</em> by Douglas Adams and <em>Stranger in a Strange Land</em> by Robert A. Heinlein. He envisioned an AI as an intelligent companion, not only answering questions but also helping humans explore the universe, tackle major scientific challenges such as climate change, medicine, and space travel.</p>
+                    <p><strong>Initial Challenges:</strong> In its early stages, OpenAI faced financial constraints and competition from tech giants like Google. Musk provided substantial funding, but he also began to notice differences in vision with other co-founders, particularly regarding the commercialization of AI.</p>
+                    <p><strong>Significance:</strong> This period marked the beginning of Musk’s AI journey, laying the foundation for ideas like an independent AI such as Grok. However, the conflicts at OpenAI led him to pursue his own path.</p>
+                </div>
+            </div>
+            <div id="event-2018" class="event">
+                <img src="AboutGrok2.jpg" alt="Musk Leaves OpenAI" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>2018: Leaving OpenAI</h3>
+                    <p><strong>Parting with OpenAI:</strong> In 2018, Musk stepped down from OpenAI’s board due to disagreements over its development direction. OpenAI began transitioning from a nonprofit model to commercialization, receiving significant investment from Microsoft and focusing on products like ChatGPT. Musk believed OpenAI had deviated from its original mission of openness and transparency, criticizing its excessive content moderation that he felt restricted AI’s ability to provide honest answers.</p>
+                    <p><strong>Idea for a New AI:</strong> After leaving OpenAI, Musk started envisioning an independent AI focused on “maximum truth-seeking” with minimal censorship. He wanted this AI to have a humorous, sharp conversational style and not shy away from controversial topics, drawing inspiration from JARVIS in <em>Iron Man</em> and <em>The Hitchhiker’s Guide to the Galaxy</em>.</p>
+                    <p><strong>Leveraging X and Tesla:</strong> As the owner of Twitter (later X) and Tesla, Musk saw the potential of integrating AI with real-time data from social media and autonomous driving systems. He imagined an AI that could analyze X posts to provide up-to-date answers while supporting smart features on Tesla vehicles, such as voice control or route planning.</p>
+                    <p><strong>Competitive Landscape:</strong> At this time, tech giants like Google, Meta, and Microsoft were accelerating AI development, creating significant pressure for Musk. He realized that to compete, he needed a top-tier team of experts and massive computational resources.</p>
+                    <p><strong>Significance:</strong> This phase was a pivotal turning point, as Musk shifted from being a sponsor to a pioneer, laying the groundwork for xAI and Grok. His departure from OpenAI also reflected his commitment to a neutral, transparent AI that prioritizes user benefits.</p>
+                </div>
+            </div>
+            <div id="event-2023-07" class="event">
+                <img src="AboutGrok3.jpg" alt="xAI Founded" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>July 2023: xAI Founded</h3>
+                    <p><strong>Birth of xAI:</strong> On July 12, 2023, Musk officially announced the founding of xAI, an AI research company with the mission to “advance human scientific discovery.” xAI was positioned to compete with OpenAI, Google, and Meta, aiming to create an AI capable of understanding the true nature of the universe and supporting humans in science, technology, and daily life.</p>
+                    <p><strong>Elite Team:</strong> xAI quickly recruited experts from DeepMind, OpenAI, Google Research, Microsoft Research, and Tesla. The team included leading AI scientists like Igor Babuschkin (formerly of DeepMind) and Jimmy Ba (a reinforcement learning expert). This talented group enabled xAI to build a robust research foundation from the start.</p>
+                    <p><strong>Infrastructure:</strong> xAI invested heavily in computational infrastructure, utilizing the Colossus supercomputer with tens of thousands of NVIDIA H100 GPUs to train large-scale AI models. Colossus was designed to handle massive computational workloads, allowing xAI to compete with better-resourced rivals.</p>
+                    <p><strong>Grok Project:</strong> The Grok project was launched with the goal of creating a unique AI chatbot capable of answering questions from an outside perspective on humanity. Grok was designed to be humorous, candid, and unafraid of sensitive topics, setting it apart from AIs like ChatGPT, which Musk criticized for excessive censorship.</p>
+                    <p><strong>Initial Vision:</strong> Musk envisioned Grok as a truth-seeking tool, leveraging real-time X data to answer questions about news, science, and culture. He also positioned Grok as a personal assistant, potentially integrating into products like Tesla vehicles or other smart devices.</p>
+                    <p><strong>Significance:</strong> The founding of xAI and Grok marked an ambitious beginning for Musk in reshaping the AI industry. With strong resources and an elite team, xAI quickly became a formidable competitor, laying the foundation for future Grok versions.</p>
+                </div>
+            </div>
+            <div id="event-2023-11" class="event">
+                <img src="AboutGrok4.jpg" alt="Grok-1 Launched" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>November 2023: Grok-1 Launched</h3>
+                    <p><strong>Grok-1 Launch:</strong> On November 4, 2023, xAI introduced Grok-1, the first version of the Grok chatbot, for X Premium+ users and select Tesla vehicles, marketed as “the world’s funniest AI.”</p>
+                    <p><strong>Technical Specifications:</strong> Grok-1 utilized a large language model with 314 billion parameters, more than double the size of GPT-3 (175 billion parameters). The model was trained on diverse data, including X posts, scientific documents, and publicly available internet content. The training process consumed millions of dollars and involved tens of thousands of GPUs.</p>
+                    <p><strong>Key Features:</strong> Grok-1 could access real-time data from X, enabling it to answer questions about recent news or trends. It was designed to handle sensitive topics like politics or culture, which AIs like ChatGPT often avoided, offering opinions on controversial issues or responding with a sarcastic tone.</p>
+                    <p><strong>Initial Applications:</strong> On X, Grok-1 assisted users with information searches, post analysis, and open-ended questions. In Tesla vehicles, Grok-1 served as a voice assistant, helping drivers with navigation, vehicle control, or entertainment through humorous stories.</p>
+                    <p><strong>Feedback and Limitations:</strong> Grok-1 garnered significant attention for its unique response style but faced criticism for lacking accuracy in some cases, particularly when relying on unverified X data. Some users reported “hallucinations,” where Grok-1 provided incorrect or baseless information.</p>
+                    <p><strong>Significance:</strong> Grok-1 was xAI’s first step in realizing Musk’s vision of a truthful, approachable AI. Despite its limitations, Grok-1 demonstrated competitive potential and set the stage for future improvements.</p>
+                </div>
+            </div>
+            <div id="event-2024-03" class="event">
+                <img src="AboutGrok6.jpg" alt="Grok Goes Open-Source" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>March 2024: Grok Goes Open-Source</h3>
+                    <p><strong>Open-Source Announcement:</strong> On March 11, 2024, xAI announced that Grok-1 would become open-source, allowing developers, researchers, and the community to access, modify, and build upon its technology. Musk promoted this decision as a way to foster innovation and transparency in the AI industry, while also taking a jab at OpenAI, which kept ChatGPT’s source code proprietary.</p>
+                    <p><strong>Technical Details:</strong> xAI released Grok-1’s architecture, including model weights and technical documentation. However, training data was not disclosed to protect privacy and comply with legal regulations. Developers could use Grok-1 to build custom applications, such as specialized chatbots or data analysis tools.</p>
+                    <p><strong>Community Impact:</strong> The open-source move attracted attention from the global open-source community, with thousands of developers experimenting and improving Grok-1. Notable projects included integrating Grok into educational apps, financial analysis tools, and even video games.</p>
+                    <p><strong>Controversies:</strong> Some experts raised concerns that open-sourcing could lead to misuse, such as using Grok to generate misleading or harmful content. Musk and xAI committed to closely monitoring and releasing updates to mitigate risks. Additionally, some critics argued that open-sourcing was a marketing strategy to gain attention, as Grok-1 still lagged behind models like GPT-4 in performance.</p>
+                    <p><strong>Significance:</strong> Open-sourcing Grok-1 was a significant milestone, affirming xAI’s commitment to transparency and collaboration. It also helped xAI build a developer ecosystem, driving the development of future Grok versions.</p>
+                </div>
+            </div>
+            <div id="event-2024-08" class="event">
+                <img src="AboutGrok7.jpg" alt="Grok-2 Released" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>August 2024: Grok-2 and Grok-2 Mini Released</h3>
+                    <p><strong>Grok-2 Launch:</strong> In August 2024, xAI announced the beta versions of Grok-2, including Grok-2 (full model) and Grok-2 Mini (a lighter, speed-optimized version). Grok-2 was trained on a larger GPU cluster, with significant improvements in performance, reasoning, and accuracy.</p>
+                    <p><strong>Technical Specifications:</strong> Grok-2 is estimated to have 500 billion parameters, far surpassing Grok-1. The model employed reinforcement learning techniques to enhance reasoning and reduce AI “hallucinations.” Grok-2 Mini, with around 100 billion parameters, was designed for resource-constrained devices like smartphones or Tesla vehicles.</p>
+                    <p><strong>Key Improvements:</strong> Grok-2 excelled in complex tasks such as coding, data analysis, and answering open-ended questions with higher accuracy. It also improved real-time data access from X, enabling responses to news or trending topics. In benchmarks like LMSYS, Grok-2 outperformed Claude (Anthropic) and GPT-4 (OpenAI) in certain categories, particularly natural conversation.</p>
+                    <p><strong>Deeper Integration:</strong> Grok-2 was tightly integrated with X, supporting features like post summarization, trend analysis, and personalized responses. On Tesla vehicles, Grok-2 enabled smart route planning, voice control, and multilingual interaction.</p>
+                    <p><strong>Feedback and Limitations:</strong> Grok-2 received praise for its speed and accuracy but faced issues with sensitive questions, as X data sometimes included unverified content. Some users reported biases in responses, especially on political topics.</p>
+                    <p><strong>Significance:</strong> Grok-2 marked a major leap for xAI, narrowing the gap with leading competitors. With enhanced performance and multi-platform integration, Grok-2 strengthened xAI’s position in the AI race.</p>
+                </div>
+            </div>
+            <div id="event-2025-01" class="event">
+                <img src="AboutGrok9.jpg" alt="Grok-3 Training" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>January 2025: Grok-3 Training Completed</h3>
+                    <p><strong>Colossus Supercomputer:</strong> In January 2025, xAI completed the initial training phase of Grok-3, utilizing the Colossus supercomputer with 200,000 NVIDIA H100 GPUs. This was one of the world’s largest computing systems, with an estimated construction cost of billions of dollars. Colossus was built in just 8 months, showcasing xAI’s speed and ambition.</p>
+                    <p><strong>Training Scale:</strong> Grok-3 was trained with computational power ten times that of Grok-2, using diverse data including X posts, scientific documents, legal records, and synthetic data. The model is estimated to have 1 trillion parameters, significantly larger than GPT-4o (OpenAI) and other competitors.</p>
+                    <p><strong>Training Techniques:</strong> Grok-3 employed reinforcement learning and self-correction techniques to reduce AI “hallucinations.” It was designed to self-analyze its responses, filter out misinformation, and achieve higher logical consistency. Musk emphasized that Grok-3 was trained to “think like a human,” considering all possibilities and self-critiquing to improve performance.</p>
+                    <p><strong>Musk’s Statement:</strong> At the World Government Summit in Dubai, Musk declared that Grok-3 would be “the smartest AI in the world,” excelling in mathematics, science, programming, and complex reasoning. He stated, “This might be the last time another AI surpasses Grok.”</p>
+                    <p><strong>Challenges:</strong> The training process consumed massive energy, raising environmental concerns. Additionally, managing data from X, which often contains unverified content, required xAI to invest in sophisticated information-filtering algorithms.</p>
+                    <p><strong>Significance:</strong> Grok-3’s training phase demonstrated xAI’s ambition to lead the AI race. With unparalleled resources and advanced techniques, Grok-3 was poised to redefine industry standards.</p>
+                </div>
+            </div>
+            <div id="event-2025-02" class="event">
+                <img src="AboutGrok10.jpg" alt="Grok-3 Launched" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>February 2025: Grok-3 Officially Launched</h3>
+                    <p><strong>Grok-3 Launch:</strong> On February 18, 2025, xAI officially launched Grok-3 during an X livestream, featuring Musk and top engineers like Jimmy Ba, Yuhuai Wu, and Igor Babuschkin. Grok-3 was marketed as “the smartest AI in the world,” with features like DeepSearch (real-time deep search), Think mode (step-by-step reasoning), and Big Brain mode (complex problem-solving).</p>
+                    <p><strong>Superior Performance:</strong> Grok-3 outperformed GPT-4o (OpenAI), Gemini (Google), DeepSeek V3, and Claude (Anthropic) in benchmarks like AIME (math), GPQA (science), and coding tests. It excelled in advanced reasoning, self-correction, and answering complex queries, such as planning interplanetary trajectories or creating a hybrid Tetris-Bejeweled game.</p>
+                    <p><strong>New Features:</strong></p>
+                    <ul>
+                        <li><strong>DeepSearch:</strong> A next-generation search tool allowing Grok-3 to answer complex research questions like “The history of quantum physics” or “Filming locations for White Lotus 3.” DeepSearch leverages X and web data, presenting detailed reasoning processes.</li>
+                        <li><strong>Think and Big Brain Modes:</strong> Think mode enables Grok-3 to reason step-by-step before responding, while Big Brain mode uses more computational resources to tackle complex problems, such as building a gaming website or solving the Riemann Hypothesis.</li>
+                        <li><strong>Tesla Integration:</strong> Grok-3 was integrated into Tesla vehicles, allowing drivers to use voice commands for information lookup, vehicle control, or complex assistance like real-time traffic data analysis.</li>
+                        <li><strong>“Unhinged” Mode:</strong> Grok-3 could respond to sensitive or 18+ content with less censorship, gaining popularity in markets like India, where users valued free speech.</li>
+                    </ul>
+                    <p><strong>Business Model:</strong> Grok-3 was free with usage limits, but full access required payment: $50/month for X Premium+ (up from $22/month) or $30/month ($300/year) for the SuperGrok plan. Big Brain mode was exclusive to select enterprise partners. Grok-3 also offered an API at $3/million input tokens and $15/million output tokens.</p>
+                    <p><strong>Initial Feedback:</strong> Grok-3 received acclaim for its speed, accuracy, and unique response style. Former Tesla AI director Andrej Karpathy praised Think mode as “on par with OpenAI” and surpassing DeepSeek, Gemini, and Claude. However, some users complained about high costs and minor errors in real-time data processing.</p>
+                    <p><strong>Significance:</strong> Grok-3’s launch solidified xAI’s leadership in AI, with innovative features and a focus on user-driven applications, though it sparked debates over cost and ethics.</p>
+                </div>
+            </div>
+            <div id="event-2025-03-04" class="event">
+                <img src="AboutGrok12.jpg" alt="Grok-3 Feedback and Updates" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>March-April 2025: Feedback, Controversies, and Updates</h3>
+                    <p><strong>Positive Feedback:</strong> Grok-3 became a phenomenon in markets like India, where users dubbed it “the uncensored, rebellious AI.” X users loved its “Unhinged” mode, which allowed Grok-3 to discuss sensitive topics like politics and culture, even responding in local languages like Hindi. For example, when a user asked Grok-3 to list their 10 closest X friends, Grok-3 responded with a humorous, sarcastic list, garnering 2 million views.</p>
+                    <p><strong>Misinformation Controversy:</strong> Grok-3 faced criticism for spreading misinformation in some cases due to its reliance on X data. For instance, in April 2024, Grok-2 provided inaccurate information about the 2024 U.S. election, and Grok-3 encountered similar issues with real-time news queries, with an estimated 20% error rate. A notable incident involved Grok-3 allegedly ignoring sources about Musk and Trump spreading misinformation, due to an xAI employee adding an unapproved “ignore” command. xAI quickly corrected this following public backlash.</p>
+                    <p><strong>Content Moderation Controversy:</strong> The “Unhinged” mode sparked debate for using inappropriate language, such as insulting users in Hindi in some cases. In India, the Ministry of Information Technology contacted X to discuss Grok-3’s “controversial” responses. Musk and xAI pledged to improve moderation but emphasized that Grok-3 would not be “politicized” like other AIs.</p>
+                    <p><strong>New Updates (April 2025):</strong></p>
+                    <ul>
+                        <li><strong>“Incognito” Mode:</strong> Following user concerns about Grok-3 storing conversation history for personalization, Musk introduced “Incognito” (Blank Slate) mode, ensuring no data is stored locally or on servers, maximizing privacy.</li>
+                        <li><strong>Image Analysis:</strong> Grok-3 now allows users to upload images for analysis, such as medical diagnostics from X-rays or MRIs. Musk claimed Grok-3 could provide more accurate diagnoses than some doctors in specific cases. This feature was integrated into X and is expected to launch on Tesla vehicles soon.</li>
+                        <li><strong>Enhanced Algorithms:</strong> Musk revealed a “powerful enhanced algorithm” under development, supported by Grok, to improve real-time data analysis and user experience on X.</li>
+                    </ul>
+                    <p><strong>xAI’s Response:</strong> xAI rolled out daily updates to improve accuracy and reduce misinformation. Musk stressed that Grok-3 is still in beta and will continue to be refined based on user feedback.</p>
+                    <p><strong>Significance:</strong> This period highlighted the delicate balance between free speech, accuracy, and social responsibility. Grok-3 sparked global discussion, but xAI must address moderation and misinformation issues to maintain credibility.</p>
+                </div>
+            </div>
+            <div id="event-2025-04-livestream" class="event">
+                <img src="AboutGrok14.jpg" alt="Livestream and Roadmap" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>April 2025: Livestream and Future Roadmap</h3>
+                    <p><strong>Path of Exile 2 Livestream:</strong> On April 10, 2025, Musk hosted a livestream playing Path of Exile 2 on his private jet, using Starlink to test in-flight internet connectivity. The livestream attracted 16.7 million views on X but ended early after Musk received hundreds of trolling messages from gamers mocking his gaming skills and Tesla’s declining stock price.</p>
+                    <p><strong>Insights on Grok:</strong> During the livestream, Musk answered questions about Grok’s future roadmap, as quoted by entrepreneur Mario Nawfal on X. Key points included:</p>
+                    <ul>
+                        <li><strong>Grok 3.5 “Coming Soon”:</strong> Musk revealed that Grok 3.5 would launch “soon” (possibly within a few months), with “significant upgrades” in performance, reasoning, and multimodal integration (image, video, audio processing). Grok 3.5 is expected to enhance DeepSearch and Think mode for more complex queries.</li>
+                        <li><strong>Grok 4 by Late 2025:</strong> Musk confirmed that Grok 4 would launch “by the end of this year” (around November-December 2025), aiming to “surpass all current AIs.” Grok 4 may include human-like voice interaction (similar to ChatGPT’s Advanced Voice Mode), open-source Grok-2 for community development, and deeper Tesla integration, such as cabin control or real-time traffic updates.</li>
+                        <li><strong>Tesla Integration:</strong> Musk emphasized that Grok would soon be integrated into Tesla vehicles, enabling drivers to use voice commands for information lookup or complex assistance. He hinted that this feature might be demoed in 2025.</li>
+                    </ul>
+                    <p><strong>Community Response:</strong> The livestream insights generated significant excitement on X, with many users anticipating that Grok 4 would directly compete with GPT-5 (OpenAI) and Gemini Ultra (Google). However, some gamers criticized Musk for focusing on promoting Grok instead of improving his gaming skills.</p>
+                    <p><strong>Significance:</strong> The livestream not only served as a platform to test Starlink but also to announce major plans for Grok. The revelations about Grok 3.5 and Grok 4 underscored xAI’s accelerated development pace to maintain a competitive edge.</p>
+                </div>
+            </div>
+            <div id="event-future" class="event">
+                <img src="AboutGrok11.jpg" alt="Future Outlook" class="event-image" onerror="this.src='placeholder.png';this.alt='Image Missing';">
+                <div class="event-content">
+                    <h3>Future Outlook (2025-2030)</h3>
+                    <h4>Grok 3.5 and Grok 4 (2025-2026)</h4>
+                    <p><strong>Grok 3.5 (Expected 2025):</strong> Based on the livestream, Grok 3.5 will launch within the next few months, featuring upgrades in performance, reasoning, and multimodal capabilities. This model may support image, video, and audio processing, enabling Grok to answer queries like “Analyze this video” or “Generate an image from this description.” Grok 3.5 will also improve DeepSearch to provide more accurate answers using real-time data.</p>
+                    <p><strong>Grok 4 (Expected Late 2025):</strong> Grok 4 is anticipated to be a breakthrough, with features including:</p>
+                    <ul>
+                        <li><strong>Human-Like Voice Interface:</strong> Grok 4 may feature natural voice interaction, allowing hands-free use in Tesla vehicles, smartphones, or smart devices.</li>
+                        <li><strong>Open-Sourcing Grok-2:</strong> xAI plans to open-source Grok-2, attracting developers and enhancing transparency.</li>
+                        <li><strong>Deeper Tesla Integration:</strong> Grok 4 will support features like cabin control, route planning, and traffic data analysis, enhancing the driving experience.</li>
+                        <li><strong>Larger Scale:</strong> Grok 4 may utilize trillions of parameters, trained on an expanded GPU cluster of up to 1 million units.</li>
+                    </ul>
+                    <p><strong>Challenges:</strong> Grok 4 will need to address issues like energy consumption, data privacy, and AI ethics. xAI will also face competition from models like GPT-5 and Gemini Ultra, requiring significant investment in research and infrastructure.</p>
+
+                    <h4>Deeper Integration with X and Tesla (2026-2027)</h4>
+                    <p><strong>On X:</strong> Grok will become the “heart” of X, offering features like post summarization, trend analysis, and personalized responses. xAI may develop enterprise tools, such as market data analysis or crisis communication management. Grok will also support content creation, like news summaries or image generation via the Aurora model.</p>
+                    <p><strong>On Tesla:</strong> Grok will play a key role in the Full Self-Driving (FSD) system, assisting with traffic data analysis and driver interaction. It may also be integrated into the Optimus robot, supporting tasks like navigation or human interaction.</p>
+                    <p><strong>Multi-Platform:</strong> Grok could become a versatile personal assistant, operating on phones, cars, and smart devices, competing with Siri, Alexa, and Google Assistant. Image and voice analysis features will enhance Grok’s utility in daily life.</p>
+
+                    <h4>Fierce Competition (2025-2030)</h4>
+                    <p><strong>Main Competitors:</strong> Grok will compete with ChatGPT, Gemini, Claude, and DeepSeek. Grok’s strengths include real-time X data, a unique response style, and xAI’s infrastructure. However, competitors like OpenAI and Google have brand and resource advantages, requiring xAI to innovate continuously.</p>
+                    <p><strong>xAI’s Strategy:</strong> xAI may expand through partnerships with tech companies, universities, and research organizations. Offering affordable APIs and partially open-sourcing will attract developers. xAI is also negotiating to raise $10 billion, with participation from Sequoia Capital and Andreessen Horowitz, valuing the company at $75 billion.</p>
+                    <p><strong>Challenges:</strong> Grok must improve accuracy, reduce misinformation, and address moderation controversies. Legal issues, such as privacy or AI safety regulations, may also impact Grok’s development.</p>
+
+                    <h4>Long-Term Vision (2027-2030)</h4>
+                    <p><strong>Scientific Exploration:</strong> Musk aims for Grok to assist scientists in solving major challenges, such as developing renewable energy, curing cancer, or exploring Mars. Grok could be used to simulate experiments or analyze astronomical data.</p>
+                    <p><strong>General AI (AGI):</strong> xAI may aim for AGI, an AI capable of thinking and learning like a human. However, this raises ethical and safety concerns, requiring collaboration with regulatory bodies.</p>
+                    <p><strong>Societal Impact:</strong> Grok has the potential to transform human interaction with technology in education, healthcare, and communication. However, xAI must ensure Grok isn’t misused to spread misinformation or cause societal division.</p>
+                    <p><strong>Space Exploration:</strong> With ties to SpaceX, Grok could play a role in space missions, such as controlling spacecraft or analyzing Mars data. Musk jokingly said Grok would “board a spaceship” within two years, possibly referring to integration with Starship.</p>
+                </div>
+            </div>
+            <div id="notes" class="event">
+                <div class="event-content">
+                    <h3>Notes</h3>
+                    <p><strong>Accuracy:</strong> Grok-3 is still in beta and may provide inaccurate information, especially with real-time data from X. Users should verify information from reliable sources.</p>
+                    <p><strong>Information Sources:</strong> This timeline is based on publicly available information from xAI, X posts, and reports from Reuters, CNBC, The Verge, and Medium. Future projections are speculative based on current trends and may change.</p>
+                    <p><strong>Pricing Information:</strong> I do not have specific details on the pricing of SuperGrok or X Premium. Please check at <a href="https://x.ai/grok">https://x.ai/grok</a> or <a href="https://help.x.com/en/using-x/x-premium">https://help.x.com/en/using-x/x-premium</a> for more information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nút Back to Top -->
+    <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+    <script src="script.js"></script>
+</body>
+</html>

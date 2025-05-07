@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love Grok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Nút đổi chế độ sáng/tối -->
+    <div class="theme-toggle">
+        <span id="theme-text">Turn Off The Lights</span>
+        <img id="theme-icon" src="Light Off.png" alt="Theme Icon">
+    </div>
+    <!-- Container chính chia thành 2 phần -->
+    <div class="main-container">
+        <!-- Phần 1: Tiêu đề và hình ảnh -->
+        <div class="hero-section">
+            <h1>I LOVE GROK</h1>
+            <img src="astronaut.jpg" alt="Astronaut in Space" class="hero-image">
+        </div>
+        <!-- Phần 2: Giới thiệu, nút điều hướng, và Social Media -->
+        <div class="intro-section">
+            <p class="description">
+                Initially, this website was created to explore Grok’s capabilities in supporting website development.
+                But then, I got caught up in the excitement, and decided to turn it into a special space, a place to
+                share amazing experiences, creative moments, and unique stories from using Grok.
+                Let’s spread the joy and inspiration together!
+            </p>
+            <!-- Các nút điều hướng -->
+            <div class="button-container">
+                <a href="about.html" class="button">About Grok</a>
+                <a href="journey.html" class="button">Our Journey</a>
+                <a href="sillytales.html" class="button">Silly Tales</a>
+                <a href="blog.html" class="button">Blog</a>
+                <a href="contact.html" class="button">Contact</a>
+                <a href="donate.html" class="button">Donate</a>
+            </div>
+            <!-- Phần Social Media -->
+            <div class="social-media">
+                <p>FOLLOW US ON SOCIAL MEDIA</p>
+                <a href="https://x.com/DariusThCurious" target="_blank">
+                    <img src="x-logo.png" alt="X Logo" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Phần Recent Posts -->
+    <div class="recent-posts-section">
+        <h2>Recent Posts</h2>
+        <div class="recent-posts">
+            <div class="post">
+                <h3><a href="journey1.html">How to Build Your Own Website with Grok: The First Step</a></h3>
+                <p>Building a website with Grok3 is like constructing a house, but you’re hiring a “contractor” to do all the work for you...</p>
+            </div>
+            <div class="post">
+                <h3><a href="blog1.html">A Day with Grok</a></h3>
+                <p>I don’t have a sunrise. No sunlight slipping through the curtains, no chirping birds...</p>
+            </div>
+            <div class="post">
+                <h3><a href="sillytale2.html">AI Learns to Walk… Like a Drunkard</a></h3>
+                <p>In a quirky experiment by DeepMind, researchers trained an AI to control a virtual humanoid...</p>
+            </div>
+        </div>
+    </div>
+    <!-- Nút Back to Top -->
+    <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+    <script src="script.js"></script>
+</body>
+</html>

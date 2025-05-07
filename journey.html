@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey with Grok - I Love Grok</title>
+    <meta name="description" content="Explore our personal journey with Grok, sharing memorable experiences and insights. Discover stories that connect us through I Love Grok.">
+    <meta name="keywords" content="Grok, Our Journey, I Love Grok, personal stories, experiences">
+    <meta property="og:title" content="Our Journey with Grok - I Love Grok">
+    <meta property="og:description" content="Explore our personal journey with Grok, sharing memorable experiences and insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:3000/journey.html">
+    <meta property="og:image" content="/images/Journey01_01.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="about.html">About Grok</a></li>
+                <li><a href="journey.html" class="active">Our Journey</a></li>
+                <li><a href="sillytales.html">Silly Tales</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="theme-toggle">
+            <span id="theme-text">Turn Off The Lights</span>
+            <img id="theme-icon" src="Light Off.png" alt="Theme Icon">
+        </div>
+        <h1>Our Journey</h1>
+        <div class="filter-search">
+            <div class="form-group">
+                <label for="search-title">Search by Title:</label>
+                <input type="text" id="search-title" placeholder="Enter title to search">
+            </div>
+        </div>
+        <div class="recent-posts-section">
+            <div class="loading-spinner" id="loading-spinner"></div>
+            <div class="recent-posts" id="journey-posts" style="display: none;"></div>
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </div>
+    <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+    <script src="script.js"></script>
+    <script src="journey.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="meta-title">Post - I Love Grok</title>
+    <meta name="description" id="meta-description" content="Read a detailed post from Our Journey on I Love Grok. Explore personal stories and experiences with Grok.">
+    <meta name="keywords" content="Grok, Our Journey, I Love Grok, personal story, experience">
+    <meta property="og:title" id="meta-og-title" content="Post - I Love Grok">
+    <meta property="og:description" id="meta-og-description" content="Read a detailed post from Our Journey on I Love Grok.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" id="meta-og-url" content="http://localhost:3000/journey-post.html">
+    <meta property="og:image" id="meta-og-image" content="/images/Journey01_01.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="about.html">About Grok</a></li>
+                <li><a href="journey.html" class="active">Our Journey</a></li>
+                <li><a href="sillytales.html">Silly Tales</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="theme-toggle">
+            <span id="theme-text">Turn Off The Lights</span>
+            <img id="theme-icon" src="Light Off.png" alt="Theme Icon">
+        </div>
+        <h1 id="post-title"></h1>
+        <div id="post-image"></div>
+        <div class="event-content" id="post-content"></div>
+        <div class="post-navigation">
+            <button id="prev-post" class="nav-button" disabled>
+                <span class="nav-label">Previous Post:</span>
+                <span id="prev-title">No previous post</span>
+            </button>
+            <button id="next-post" class="nav-button" disabled>
+                <span class="nav-label">Next Post:</span>
+                <span id="next-title">No next post</span>
+            </button>
+        </div>
+    </div>
+    <button id="back-to-main" onclick="window.location.href='journey.html'">Back to Our Journey</button>
+    <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+    <script src="script.js"></script>
+    <script src="journey-post.js"></script>
+</body>
+</html>

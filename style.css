@@ -1,0 +1,750 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    scroll-behavior: smooth;
+}
+
+body.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Thanh bên trái (sidebar) */
+.sidebar {
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    display: block;
+    z-index: 1000;
+    padding-top: 60px;
+}
+
+body.dark .sidebar {
+    background-color: #333;
+    border-right: 1px solid #555;
+}
+
+/* Nội dung Menu (chung cho tất cả trang) */
+.sidebar-menu {
+    display: block; /* Hiển thị Menu mặc định trên các trang */
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.sidebar-menu ul li {
+    margin: 15px 0; /* Khoảng cách đều giữa các mục */
+}
+
+.sidebar-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px; /* Kích thước chữ đồng đều */
+    font-family: Arial, sans-serif; /* Đảm bảo phông chữ là Arial */
+    display: block; /* Đảm bảo chữ không bị lệch */
+}
+
+body.dark .sidebar-menu ul li a {
+    color: #fff; /* Chữ trắng trong chế độ tối */
+}
+
+.sidebar-menu ul li a.active {
+    font-weight: bold;
+}
+
+.sidebar-menu ul li a:hover {
+    color: #555;
+}
+
+body.dark .sidebar-menu ul li a:hover {
+    color: #ccc;
+}
+
+/* Thanh đặc biệt cho trang About Grok */
+.sidebar-about-grok .sidebar-menu {
+    display: none; /* Ẩn Menu ban đầu trên trang About Grok */
+}
+
+.sidebar-about-grok.active .sidebar-menu {
+    display: block; /* Hiển thị Menu khi nhấn nút */
+}
+
+.sidebar-about-grok .sidebar-timeline {
+    display: block; /* Hiển thị Timeline ban đầu trên trang About Grok */
+}
+
+.sidebar-about-grok.active .sidebar-timeline {
+    display: none; /* Ẩn Timeline khi nhấn nút */
+}
+
+.sidebar-about-grok .sidebar-timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.sidebar-about-grok .sidebar-timeline-header h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.sidebar-about-grok .reverse-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.sidebar-about-grok .sidebar-timeline ul {
+    list-style: none;
+    padding: 10px 30px 10px 10px;
+    margin: 0;
+    text-align: left;
+}
+
+.sidebar-about-grok .sidebar-timeline ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar-about-grok .sidebar-timeline ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    word-break: break-word;
+}
+
+body.dark .sidebar-about-grok .sidebar-timeline ul li a {
+    color: #fff;
+}
+
+.sidebar-about-grok .sidebar-timeline ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Nút Hamburger */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1001;
+}
+
+/* Nội dung chính */
+.main-content {
+    margin-left: 25%;
+    width: 75%;
+    max-width: 600px; /* Giới hạn này áp dụng cho các trang khác như Donate */
+    padding: 40px;
+    margin-right: auto;
+}
+
+/* Ghi đè max-width cho trang About Grok */
+.main-content.timeline-content {
+    max-width: none; /* Loại bỏ giới hạn max-width */
+}
+
+/* Căn giữa tiêu đề h1 trong main-content */
+.main-content h1 {
+    text-align: center;
+}
+
+/* Mô tả (chung) */
+.description {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 0 40px 0;
+    text-align: left;
+}
+
+/* Mô tả trên trang Donate */
+.main-content .description {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Nút đổi chế độ sáng/tối */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-toggle img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+.theme-toggle span {
+    font-size: 16px;
+}
+
+/* Container chính chia thành 2 phần (cho trang chủ) */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    min-height: 60vh;
+}
+
+/* Phần 1: Tiêu đề và hình ảnh (cho trang chủ) */
+.hero-section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    width: 400px;
+    height: auto;
+    margin: 20px 0;
+    border: 2px solid #000;
+}
+
+/* Phần 2: Giới thiệu, nút điều hướng, và Social Media (cho trang chủ) */
+.intro-section {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Các nút điều hướng (cho trang chủ) */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    justify-content: flex-start;
+}
+
+.button {
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.dark .button {
+    background-color: #fff;
+    color: #000;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Social Media (cho trang chủ) */
+.social-media {
+    margin-top: 40px;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+    text-align: center;
+}
+
+body.dark .social-media {
+    border-top: 1px solid #fff;
+}
+
+.social-media p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Recent Posts (cho trang chủ) */
+.recent-posts-section {
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.recent-posts {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.post h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.post h3 a {
+    color: #000;
+    text-decoration: none;
+}
+
+body.dark .post h3 a {
+    color: #fff;
+}
+
+.post h3 a:hover {
+    text-decoration: underline;
+}
+
+.post p {
+    font-size: 16px;
+    color: #555;
+}
+
+body.dark .post p {
+    color: #ccc;
+}
+
+/* Trang Donate */
+.donate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 380px;
+}
+
+.coffee-gif {
+    width: 100px;
+    height: auto;
+}
+
+.donate-button {
+    width: 150px;
+    height: auto;
+}
+
+/* Trang About Grok */
+.timeline-content {
+    margin-left: 0;
+    max-width: none; /* Loại bỏ giới hạn max-width */
+}
+
+.timeline-details {
+    max-width: 500px;
+    width: 100%; /* Đảm bảo nội dung chính mở rộng tối đa trong khung chứa */
+    margin-left: 40%; /* Đẩy nội dung ra khỏi thanh menu */
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.event {
+    margin-bottom: 40px;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 500px;
+    min-width: 500px;
+    height: auto;
+    border: 1px solid #000;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.event-content {
+    /* Nội dung chữ ở dưới */
+}
+
+.event h3 {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.event p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.event strong {
+    font-weight: bold;
+}
+
+/* Trang Contact */
+.contact-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #000;
+    text-decoration: none;
+}
+
+body.dark .contact-info a {
+    color: #fff;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+body.dark .submit-button {
+    background-color: #fff;
+    color: #000;
+}
+
+.submit-button:hover {
+    opacity: 0.8;
+}
+
+/* Nút Back to Top */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+}
+
+body.dark #back-to-top {
+    background-color: #fff;
+    color: #000;
+}
+
+#back-to-top:hover {
+    opacity: 0.8;
+}
+/* Thêm vào cuối file style.css */
+
+/* Nút Delete trên trang Admin */
+.delete-button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
+/* Hình ảnh nhỏ trong danh sách bài viết */
+.post-image {
+    width: 200px;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #000;
+}
+
+/* Đảm bảo nội dung không bị tràn */
+.post {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* Phân trang */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 5px;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination a.active {
+    background-color: #e0e0e0;
+    border-color: #999;
+    font-weight: bold;
+}
+
+/* Dark mode */
+.dark .pagination a {
+    background-color: #333;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+.dark .pagination a:hover {
+    background-color: #555;
+}
+
+.dark .pagination a.active {
+    background-color: #555;
+    border-color: #777;
+    font-weight: bold;
+}
+
+/* Nút Thoát ra trang chính */
+#back-to-main {
+    position: fixed;
+    bottom: 60px; /* Đặt phía trên nút Back to Top */
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+body.dark #back-to-main {
+    background-color: #fff;
+    color: #000;
+}
+
+#back-to-main:hover {
+    opacity: 0.8;
+}
+
+/* Thêm vào cuối file style.css */
+
+/* Điều hướng bài viết */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.nav-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+body.dark .nav-button {
+    background-color: #fff;
+    color: #000;
+}
+
+.nav-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+body.dark .nav-button:disabled {
+    background-color: #555;
+}
+
+.nav-button:hover:not(:disabled) {
+    opacity: 0.8;
+}
+
+.nav-label {
+    font-weight: bold;
+}
+
+#prev-title, #next-title {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.filter-search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.filter-search .form-group {
+    flex: 1;
+}
+
+.filter-search select,
+.filter-search input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+body.dark .filter-search select,
+body.dark .filter-search input {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.loading-spinner::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+body.dark .loading-spinner::after {
+    border: 4px solid #555;
+    border-top: 4px solid #fff;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "1745672184823",
+    "title": "Hoyoverse Had Enough of Her",
+    "description": "Join my Patreon for Exclusive Anime Reacts, VODS and MORE   / tectonereacts  \nSUBSCRIBE PLEASE & LIKE PLEASE\nOTHER CHANNEL FOR MORE VARIETY & CLIPS    / @moretectoneclips  ",
+    "content": "Hướng dẫn đăng bài thử\nĐăng bài thử:  \nMở file admin.html trên trình duyệt (cần chạy qua server cục bộ, tôi sẽ hướng dẫn nếu bạn chưa biết cách).  \n\nĐiền form:  \nTitle: \"My Test Post\".  \n\nDescription: \"This is a test post for Our Journey.\".  \n\nContent: \"This is the full content of my test post.\".  \n\nUpload Image: Chọn một hình ảnh (nếu muốn).  \n\nCategory: Chọn \"Our Journey\".\n\nNhấn \"Post Article\".  \n\nFile posts.json sẽ tự động tải về máy (kiểm tra thư mục Downloads).  \n\nNếu có hình ảnh, lưu hình ảnh vào thư mục images/ với tên được gợi ý (ví dụ: 1698723456789-test.jpg).\n\nSao chép file posts.json vào thư mục website:  \nDi chuyển file posts.json vừa tải về vào thư mục website (thay thế file posts.json cũ nếu có).  \n\nNếu có hình ảnh, đảm bảo hình ảnh đã được lưu vào thư mục images/.\n\nKiểm tra bài viết:  \nMở file journey.html trên trình duyệt (cần chạy qua server cục bộ).  \n\nĐể chạy server cục bộ:  \nNếu bạn có VS Code, cài extension \"Live Server\", sau đó nhấp chuột phải vào journey.html và chọn \"Open with Live Server\".  \n\nHoặc nếu bạn có Node.js, mở terminal trong thư mục website, chạy lệnh npx http-server, sau đó truy cập http://localhost:8080/journey.html.\n\nKiểm tra xem bài viết \"My Test Post\" có hiển thị không.\n\n",
+    "category": "journey",
+    "image": "1745672184823-GpV6wfAXQAA_SNA.jpg",
+    "date": "2025-04-26T12:56:24.823Z"
+  }
+]

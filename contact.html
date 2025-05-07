@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - I Love Grok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Thanh menu bên trái -->
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="index.html">Main Page</a></li>
+                <li><a href="about.html">About Grok</a></li>
+                <li><a href="journey.html">Our Journey</a></li>
+                <li><a href="sillytales.html">Silly Tales</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="main-content">
+        <!-- Nút đổi chế độ sáng/tối -->
+        <div class="theme-toggle">
+            <span id="theme-text">Turn Off The Lights</span>
+            <img id="theme-icon" src="Light Off.png" alt="Theme Icon">
+        </div>
+
+        <!-- Tiêu đề -->
+        <h1>Contact Me</h1>
+
+        <!-- Thông tin liên hệ -->
+        <div class="contact-info">
+            <p class="description">
+                I’d love to hear from you! Feel free to reach out with any questions, feedback, or just to say hello.
+            </p>
+            <p><strong>Email:</strong> <a href="mailto:nxtr1609@gmail.com">nxtr1609@gmail.com</a></p>
+            <p><strong>Follow me on social media:</strong></p>
+            <div class="social-links">
+                <a href="https://x.com/DariusThCurious" target="_blank">
+                    <img src="x-logo.png" alt="X Logo" class="social-icon">
+                </a>
+            </div>
+        </div>
+
+        <!-- Biểu mẫu liên hệ -->
+        <div class="contact-form">
+            <h3>Send Me a Message</h3>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Nút Back to Top -->
+    <button id="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+    <!-- Thêm thư viện EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Admin - I Love Grok</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cropper.min.css">
+    <style>
+        .cropper-container { max-width: 400px; margin: 20px 0; }
+        #preview { width: 200px; height: 200px; border: 1px solid #000; margin-top: 10px; }
+        #login-section { display: block; text-align: center; }
+        #admin-section { display: none; }
+        .logout-button { position: fixed; top: 20px; right: 20px; background-color: #f44336; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+        .logout-button:hover { background-color: #d32f2f; }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div id="login-section">
+            <h1>Admin Login</h1>
+            <div class="contact-form">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="submit-button">Login</button>
+                </form>
+            </div>
+        </div>
+        <div id="admin-section">
+            <button class="logout-button" onclick="logout()">Logout</button>
+            <h1>Hidden Admin - Post a New Article</h1>
+            <div class="contact-form">
+                <form id="admin-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content:</label>
+                        <textarea id="content" name="content" rows="10" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="original-image">Upload Original Image (for detail page):</label>
+                        <input type="file" id="original-image" name="original-image" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Upload Image to Crop (for main page):</label>
+                        <input type="file" id="image" name="image" accept="image/*">
+                        <div class="cropper-container">
+                            <img id="image-preview" style="display: none; max-width: 100%;">
+                            <canvas id="preview" style="display: none;"></canvas>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="journey">Our Journey</option>
+                            <option value="sillytales">Silly Tales</option>
+                            <option value="blog">Blog</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Post Article</button>
+                </form>
+            </div>
+            <div class="recent-posts-section">
+                <h2>Manage Articles</h2>
+                <div class="filter-search">
+                    <div class="form-group">
+                        <label for="filter-category">Filter by Category:</label>
+                        <select id="filter-category">
+                            <option value="">All</option>
+                            <option value="journey">Our Journey</option>
+                            <option value="sillytales">Silly Tales</option>
+                            <option value="blog">Blog</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="filter-date">Sort by Date:</label>
+                        <select id="filter-date">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="search-title">Search by Title:</label>
+                        <input type="text" id="search-title" placeholder="Enter title to search">
+                    </div>
+                </div>
+                <div class="recent-posts" id="post-list"></div>
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+    </div>
+    <script src="cropper.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
